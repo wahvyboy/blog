@@ -1,7 +1,7 @@
 import React from 'react';
 import { Language } from '../types';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { Search, Menu, X, Share2 } from 'lucide-react';
+import { Search, Menu, X, Share2, Mail, Send } from 'lucide-react';
 
 interface HeaderProps {
   language: Language;
@@ -12,6 +12,7 @@ interface HeaderProps {
   onShareSite: () => void;
   activeCategoryKey: string | null;
   onSelectCategory: (key: string | null) => void;
+  onOpenNewsletter: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -22,7 +23,8 @@ export const Header: React.FC<HeaderProps> = ({
   onSearchClick,
   onShareSite,
   activeCategoryKey,
-  onSelectCategory
+  onSelectCategory,
+  onOpenNewsletter
 }) => {
   const t = UI_TRANSLATIONS[language];
 
@@ -46,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({
               type="button"
               onClick={() => onLanguageChange('it')}
               className={`transition-opacity cursor-pointer ${language === 'it' ? 'opacity-100 font-extrabold' : 'opacity-45 hover:opacity-80'}`}
-              title="Edizione Italiana"
+              title="Edizione Italiana (New York)"
             >
               ITA
             </button>
@@ -69,11 +71,21 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Center Tagline for medium screens */}
         <div className="text-[10px] sm:text-xs font-sans tracking-[0.25em] uppercase text-[#1A1A1A]/60 hidden md:block">
-          {language === 'en' ? 'Authentic Italian Living & Stories' : 'Storie e Vita Autentica in Italia'}
+          {language === 'en' ? 'Authentic New York Living, News & Dispatches' : 'Storie e Vita Autentica a New York'}
         </div>
 
-        {/* Right: Quick Share & Editorial Badge */}
-        <div className="flex items-center gap-4 text-xs font-sans font-bold uppercase tracking-wider">
+        {/* Right: Quick Share & Newsletter & Editorial Badge */}
+        <div className="flex items-center gap-3.5 sm:gap-4 text-xs font-sans font-bold uppercase tracking-wider">
+          <button
+            type="button"
+            onClick={onOpenNewsletter}
+            className="flex items-center gap-1.5 bg-[#D23131] hover:bg-[#1A1A1A] text-white px-2.5 py-1 text-[10px] sm:text-[11px] tracking-widest uppercase transition-colors cursor-pointer"
+            title="Subscribe to Dispatches"
+          >
+            <Send className="w-3 h-3" />
+            <span>{t.newsletterButton}</span>
+          </button>
+
           <button
             type="button"
             onClick={onShareSite}
@@ -183,8 +195,8 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </div>
 
-          {/* Search Trigger with Editorial line */}
-          <div className="flex items-center gap-3">
+          {/* Search Trigger and Newsletter action */}
+          <div className="flex items-center gap-4">
             <button
               id="nav-search-btn"
               type="button"
@@ -201,4 +213,3 @@ export const Header: React.FC<HeaderProps> = ({
     </header>
   );
 };
-

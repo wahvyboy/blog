@@ -13,12 +13,13 @@ import { Footer } from './components/Footer';
 import { CookieBadge } from './components/CookieBadge';
 import { SeoStructuredData } from './components/SeoStructuredData';
 import { InfoModals } from './components/InfoModals';
+import { NewsletterPopupModal } from './components/NewsletterPopupModal';
 import { Sparkles, Compass, Search, Filter, RefreshCw, Layers } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem('lifeinitaly_lang');
+    const saved = localStorage.getItem('lifeinnewyork_lang');
     return saved === 'it' ? 'it' : 'en';
   });
 
@@ -29,6 +30,7 @@ export default function App() {
   const [activeArticle, setActiveArticle] = useState<Article | null>(null);
   const [shareModalArticle, setShareModalArticle] = useState<Article | null>(null);
   const [isShareModalOpen, setIsShareModalOpen] = useState<boolean>(false);
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState<boolean>(false);
   const [activeInfoModal, setActiveInfoModal] = useState<'about' | 'contact' | 'privacy' | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
@@ -39,8 +41,23 @@ export default function App() {
   // Save language preference
   const handleLanguageChange = (lang: Language) => {
     setLanguage(lang);
-    localStorage.setItem('lifeinitaly_lang', lang);
+    localStorage.setItem('lifeinnewyork_lang', lang);
   };
+
+  // Automatic Newsletter Popup timer (pops up after ~3.5 seconds on visit)
+  useEffect(() => {
+    const alreadySubscribed = localStorage.getItem('lifeinnewyork_newsletter_subscribed');
+    const dismissedThisSession = sessionStorage.getItem('lifeinnewyork_newsletter_seen');
+
+    if (!alreadySubscribed && !dismissedThisSession) {
+      const timer = setTimeout(() => {
+        setIsNewsletterOpen(true);
+        sessionStorage.setItem('lifeinnewyork_newsletter_seen', 'true');
+      }, 3500);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   // Check URL hash on load for deep linking (e.g. #article-beaches-on-lake-bolsena)
   useEffect(() => {
@@ -142,6 +159,7 @@ export default function App() {
           setActiveCategoryKey(cat);
           setAppliedSearch('');
         }}
+        onOpenNewsletter={() => setIsNewsletterOpen(true)}
       />
 
       {/* Dropdown Navigation Menu */}
@@ -254,8 +272,8 @@ export default function App() {
         onBrandClick={(brand) => {
           alert(
             language === 'en'
-              ? `Exploring ${brand.name} official Italian heritage collection.`
-              : `Apertura vetrina ufficiale di ${brand.name}.`
+              ? `Exploring ${brand.name} official New York collection & flagship archives.`
+              : `Apertura archivio e vetrina ufficiale di ${brand.name} a New York.`
           );
         }}
       />
@@ -268,6 +286,7 @@ export default function App() {
         onOpenAbout={() => setActiveInfoModal('about')}
         onOpenContact={() => setActiveInfoModal('contact')}
         onOpenPrivacy={() => setActiveInfoModal('privacy')}
+        onOpenNewsletter={() => setIsNewsletterOpen(true)}
       />
 
       {/* Full Article Reader Modal (Immersive reading + TTS + Social Share) */}
@@ -286,6 +305,13 @@ export default function App() {
         onClose={() => setIsShareModalOpen(false)}
         article={shareModalArticle}
         language={language}
+      />
+
+      {/* Newsletter Popup Modal */}
+      <NewsletterPopupModal
+        language={language}
+        isOpen={isNewsletterOpen}
+        onClose={() => setIsNewsletterOpen(false)}
       />
 
       {/* Info Modals (About Us, Contact Us, Privacy Policy) */}

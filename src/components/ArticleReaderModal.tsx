@@ -28,10 +28,10 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
   const [commentText, setCommentText] = useState('');
   const [userComments, setUserComments] = useState<Array<{ name: string; text: string; date: string }>>([
     {
-      name: language === 'en' ? 'Elena Rossi' : 'Marco Bianchi',
+      name: language === 'en' ? 'Sarah Jenkins' : 'Marco Moretti',
       text: language === 'en'
-        ? 'This touched my heart! Reminds me of visiting my grandparents in central Italy every summer.'
-        : 'Questo articolo mi ha scaldato il cuore. Mi ricorda le estati passate dai nonni in collina.',
+        ? 'Such a sharp and vivid piece of NYC reporting! Captures the true grit and pulse of the neighborhood.'
+        : 'Un reportage vivido e autentico. Racconta perfettamente il battito e l\'energia indomabile di New York.',
       date: '2 days ago'
     }
   ]);

@@ -68,7 +68,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
                 <span>{language === 'en' ? 'Index of Editorial Sections' : 'Indice delle Sezioni Editoriali'}</span>
               </div>
               <span className="text-[10px] uppercase font-sans tracking-widest text-[#1A1A1A]/50">
-                LIFE IN ITALY • 2025
+                LIFE IN NEW YORK • 2026
               </span>
             </div>
 

@@ -63,7 +63,7 @@ export const CookieBadge: React.FC<CookieBadgeProps> = ({ language }) => {
                     <h3 className="font-condensed text-lg font-bold uppercase text-neutral-950">
                       {language === 'en' ? 'Privacy & Consent' : 'Privacy & Consensi'}
                     </h3>
-                    <p className="text-xs text-neutral-500">Life in Italy</p>
+                    <p className="text-xs text-neutral-500">Life in New York</p>
                   </div>
                 </div>
                 <button
@@ -77,8 +77,8 @@ export const CookieBadge: React.FC<CookieBadgeProps> = ({ language }) => {
 
               <p className="text-xs text-neutral-600 leading-relaxed my-4">
                 {language === 'en'
-                  ? 'We use essential cookies to deliver seamless bilingual translation, remember your reading preferences, and keep our Italian stories fast and accessible.'
-                  : 'Utilizziamo i cookie essenziali per garantire la traduzione bilingue, memorizzare le preferenze di lettura e offrirti la migliore esperienza sui contenuti italiani.'}
+                  ? 'We use essential cookies to deliver seamless bilingual translation, remember your reading preferences, and keep our New York stories fast and accessible.'
+                  : 'Utilizziamo i cookie essenziali per garantire la traduzione bilingue, memorizzare le preferenze di lettura e offrirti la migliore esperienza sui contenuti di New York.'}
               </p>
 
               <div className="space-y-3 mb-6">

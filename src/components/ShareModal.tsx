@@ -41,7 +41,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
   };
 
   const handleTwitterShare = () => {
-    const text = encodeURIComponent(`${shareTitle} - Life in Italy`);
+    const text = encodeURIComponent(`${shareTitle} - Life in New York`);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(currentUrl)}`, '_blank');
   };
 
@@ -55,8 +55,8 @@ export const ShareModal: React.FC<ShareModalProps> = ({
   };
 
   const handleEmailShare = () => {
-    const subject = encodeURIComponent(`Life in Italy: ${shareTitle}`);
-    const body = encodeURIComponent(`I thought you would love this story about Italy:\n\n${shareTitle}\n\n${currentUrl}`);
+    const subject = encodeURIComponent(`Life in New York: ${shareTitle}`);
+    const body = encodeURIComponent(`I thought you would love this story about New York City:\n\n${shareTitle}\n\n${currentUrl}`);
     window.open(`mailto:?subject=${subject}&body=${body}`, '_blank');
   };
 

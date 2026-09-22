@@ -1,6 +1,6 @@
 {
-  "name": "Life in Italy",
-  "description": "Italian culture, real estate, travel, and lifestyle blog with bilingual English/Italian support, scroll animations, brand showcase, and easy social sharing.",
+  "name": "Life in New York",
+  "description": "New York City local news, investigative journalism, borough culture, street food, real estate, and lifestyle blog at lifeinnewyork.blog.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

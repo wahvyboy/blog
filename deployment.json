@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-09-22T20:25:55.377Z",
+  "liveUrl": "https://verdant-desert-76dq.here.now/",
+  "claimUrl": "https://here.now/c/WsnbreDIwv7QRAl-",
+  "claimToken": "WsnbreDIwv7QRAl-",
+  "versionId": "01M35CQCNPXPJGPMX3X6MFNG3K",
+  "customDomain": "lifeinnewyork.blog",
+  "supportEmail": "support@lifeinnewyork.blog",
+  "filesCount": 3,
+  "publishStatus": {
+    "requestAuth": "none",
+    "ownership": "anonymous",
+    "accountId": null,
+    "persistence": "expiring",
+    "expiresAt": "2026-09-23T20:25:42.326Z",
+    "state": "pending"
+  }
+}

@@ -26,10 +26,10 @@ export const DestinationsSidebar: React.FC<DestinationsSidebarProps> = ({
 }) => {
   const t = UI_TRANSLATIONS[language];
 
-  const treviArticle = articles.find(a => a.slug === 'trevi-fountain-reopening-all-the-new-rules') || articles[0];
-  const navonaArticle = articles.find(a => a.slug === 'piazza-navona-fountain-of-the-four-rivers-restoration') || articles[1];
-  const vaticanArticle = articles.find(a => a.slug === 'the-vatican-launches-an-app-for-the-jubilee-2025') || articles[2];
-  const fashionArticle = articles.find(a => a.slug === 'italian-fashion-craftsmanship-timeless-elegance') || articles[3];
+  const boroughArticle = articles.find(a => a.slug === 'avenue-b-bike-boulevard-east-village-corners') || articles[0];
+  const queensArticle = articles.find(a => a.slug === 'flushing-chinatown-golden-mall-roosevelt-avenue-food-markets') || articles[1];
+  const statenArticle = articles.find(a => a.slug === 'historic-richmond-town-staten-island-colonial-crafts') || articles[2];
+  const architectureArticle = articles.find(a => a.slug === 'secrets-of-the-chrysler-building-cloud-club-m42') || articles[3];
 
   return (
     <aside id="sidebar-destinations" className="w-full space-y-12">
@@ -57,7 +57,7 @@ export const DestinationsSidebar: React.FC<DestinationsSidebarProps> = ({
         </form>
       </div>
 
-      {/* Italian Destinations Section */}
+      {/* NYC Boroughs & Neighborhoods Section */}
       <div>
         <div className="border-b border-[#1A1A1A] pb-2 mb-6 flex items-baseline justify-between">
           <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#1A1A1A]">
@@ -68,62 +68,62 @@ export const DestinationsSidebar: React.FC<DestinationsSidebarProps> = ({
           </span>
         </div>
 
-        {/* Big Featured Item: Trevi Fountain */}
-        {treviArticle && (
+        {/* Big Featured Item: East Village / Borough Highlight */}
+        {boroughArticle && (
           <div
-            onClick={() => onArticleClick(treviArticle)}
+            onClick={() => onArticleClick(boroughArticle)}
             className="group cursor-pointer mb-6"
           >
             <div className="relative overflow-hidden bg-neutral-100 mb-3 aspect-16/10 border border-[#E5E1D8]">
               <img
-                src={treviArticle.imageUrl}
-                alt={treviArticle.imageAlt[language]}
+                src={boroughArticle.imageUrl}
+                alt={boroughArticle.imageAlt[language]}
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
               />
             </div>
             <h4 className="font-editorial-serif text-xl sm:text-2xl font-bold text-[#1A1A1A] group-hover:text-[#D23131] transition-colors leading-snug">
-              {treviArticle.title[language]}
+              {boroughArticle.title[language]}
             </h4>
           </div>
         )}
 
         {/* Sub Thumbnail List */}
         <div className="space-y-4 divide-y divide-[#E5E1D8]">
-          {navonaArticle && (
+          {queensArticle && (
             <div
-              onClick={() => onArticleClick(navonaArticle)}
+              onClick={() => onArticleClick(queensArticle)}
               className="pt-4 first:pt-0 flex gap-3.5 group cursor-pointer"
             >
               <div className="w-24 h-18 sm:w-28 sm:h-20 shrink-0 bg-neutral-100 overflow-hidden border border-[#E5E1D8]">
                 <img
-                  src={navonaArticle.imageUrl}
-                  alt={navonaArticle.imageAlt[language]}
+                  src={queensArticle.imageUrl}
+                  alt={queensArticle.imageAlt[language]}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="flex-1 min-w-0">
                 <h5 className="font-editorial-serif text-base font-bold text-[#1A1A1A] group-hover:text-[#D23131] transition-colors leading-snug line-clamp-3">
-                  {navonaArticle.title[language]}
+                  {queensArticle.title[language]}
                 </h5>
               </div>
             </div>
           )}
 
-          {vaticanArticle && (
+          {statenArticle && (
             <div
-              onClick={() => onArticleClick(vaticanArticle)}
+              onClick={() => onArticleClick(statenArticle)}
               className="pt-4 flex gap-3.5 group cursor-pointer"
             >
               <div className="w-24 h-18 sm:w-28 sm:h-20 shrink-0 bg-neutral-100 overflow-hidden border border-[#E5E1D8]">
                 <img
-                  src={vaticanArticle.imageUrl}
-                  alt={vaticanArticle.imageAlt[language]}
+                  src={statenArticle.imageUrl}
+                  alt={statenArticle.imageAlt[language]}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="flex-1 min-w-0">
                 <h5 className="font-editorial-serif text-base font-bold text-[#1A1A1A] group-hover:text-[#D23131] transition-colors leading-snug line-clamp-3">
-                  {vaticanArticle.title[language]}
+                  {statenArticle.title[language]}
                 </h5>
               </div>
             </div>
@@ -131,31 +131,31 @@ export const DestinationsSidebar: React.FC<DestinationsSidebarProps> = ({
         </div>
       </div>
 
-      {/* Italian Fashion Section */}
+      {/* NYC Icons & Architecture Section */}
       <div>
         <div className="border-b border-[#1A1A1A] pb-2 mb-6 flex items-baseline justify-between">
           <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#1A1A1A]">
             {t.fashion}
           </h3>
           <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-[#D23131]">
-            {language === 'en' ? 'Style' : 'Stile'}
+            {language === 'en' ? 'Icons' : 'Icone'}
           </span>
         </div>
 
-        {fashionArticle && (
+        {architectureArticle && (
           <div
-            onClick={() => onArticleClick(fashionArticle)}
+            onClick={() => onArticleClick(architectureArticle)}
             className="group cursor-pointer"
           >
             <div className="relative overflow-hidden bg-neutral-100 mb-3 aspect-16/10 border border-[#E5E1D8]">
               <img
-                src={fashionArticle.imageUrl}
-                alt={fashionArticle.imageAlt[language]}
+                src={architectureArticle.imageUrl}
+                alt={architectureArticle.imageAlt[language]}
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
               />
             </div>
             <h4 className="font-editorial-serif text-lg sm:text-xl font-bold text-[#1A1A1A] group-hover:text-[#D23131] transition-colors leading-snug">
-              {fashionArticle.title[language]}
+              {architectureArticle.title[language]}
             </h4>
           </div>
         )}

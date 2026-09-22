@@ -15,11 +15,11 @@ export const SeoStructuredData: React.FC<SeoStructuredDataProps> = ({
     document.documentElement.lang = language;
     
     if (currentArticle) {
-      document.title = `${currentArticle.title[language]} | Life in Italy`;
+      document.title = `${currentArticle.title[language]} | Life in New York`;
     } else {
       document.title = language === 'en'
-        ? 'Life in Italy - Real Estate, Food, Culture & Travel'
-        : 'Life in Italy - Immobili, Gastronomia, Cultura e Viaggi in Italia';
+        ? 'Life in New York - NYC Local News, Culture, Real Estate & Food | lifeinnewyork.blog'
+        : 'Life in New York - Notizie Locali, Cultura, Immobili e Cucina a New York';
     }
 
     // Inject JSON-LD
@@ -39,8 +39,8 @@ export const SeoStructuredData: React.FC<SeoStructuredDataProps> = ({
           '@type': 'NewsArticle',
           headline: currentArticle.title[language],
           image: [currentArticle.imageUrl],
-          datePublished: '2025-06-23T08:00:00+02:00',
-          dateModified: '2025-06-23T09:30:00+02:00',
+          datePublished: '2026-09-10T08:00:00-04:00',
+          dateModified: '2026-09-11T09:30:00-04:00',
           author: [
             {
               '@type': 'Person',
@@ -49,10 +49,10 @@ export const SeoStructuredData: React.FC<SeoStructuredDataProps> = ({
           ],
           publisher: {
             '@type': 'Organization',
-            name: 'Life in Italy',
+            name: 'Life in New York',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://lifeinitaly.com/logo.png'
+              url: 'https://lifeinnewyork.blog/logo.png'
             }
           },
           description: currentArticle.excerpt[language],
@@ -63,14 +63,14 @@ export const SeoStructuredData: React.FC<SeoStructuredDataProps> = ({
       : {
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'Life in Italy',
-          url: 'https://lifeinitaly.com/',
+          name: 'Life in New York',
+          url: 'https://lifeinnewyork.blog/',
           description:
-            'A blog dedicated to real estate, gastronomy, culture, and travel in Italy.',
+            'Essential New York City reporting: breaking news from Gothamist & The City, Brooklyn brownstones, Manhattan dining, subway lore, and borough culture at lifeinnewyork.blog.',
           inLanguage: ['en-US', 'it-IT'],
           publisher: {
             '@type': 'Organization',
-            name: 'Life in Italy LLC'
+            name: 'Life in New York Media LLC'
           }
         };
 

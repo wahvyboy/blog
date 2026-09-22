@@ -45,7 +45,7 @@ export const BrandAdScrollShowcase: React.FC<BrandAdScrollShowcaseProps> = ({
                 <span>{language === 'en' ? 'Official Partner Spotlight' : 'Vetrina Partner Ufficiali'}</span>
               </span>
               <span className="text-[#D23131] text-xs tracking-[0.2em] uppercase font-sans font-bold">
-                {language === 'en' ? 'Made in Italy Icons' : 'Icone del Made in Italy'}
+                {language === 'en' ? 'New York Heritage Icons' : 'Icone Storiche di New York'}
               </span>
             </div>
             <h2 className="font-editorial-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1A1A]">
@@ -132,8 +132,8 @@ export const BrandAdScrollShowcase: React.FC<BrandAdScrollShowcaseProps> = ({
                 <ShieldCheck className="w-4 h-4 text-[#D23131]" />
                 <span>
                   {language === 'en'
-                    ? 'Certified Authentic Italian Craftsmanship'
-                    : 'Artigianato Italiano Autentico Certificato'}
+                    ? 'Certified NYC Heritage Institution'
+                    : 'Istituzione Storica Certificata di New York'}
                 </span>
               </div>
 
