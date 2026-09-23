@@ -1,0 +1,56 @@
+# ==============================================================================
+# Life in New York Blog (lifeinnewyork.blog) - Caddy Production Configuration
+# ==============================================================================
+# Automatic HTTPS:
+# When using a public domain name, Caddy will automatically issue and renew
+# Let's Encrypt / ZeroSSL TLS certificates with HTTP-to-HTTPS redirect.
+#
+# If you are testing with an IP address before pointing DNS, change the header to:
+#   :80
+# Or:
+#   YOUR_VPS_IP
+# ==============================================================================
+
+lifeinnewyork.blog, www.lifeinnewyork.blog {
+    # Root directory containing the built Vite dist output
+    root * /var/www/lifeinnewyork.blog/dist
+
+    # Enable fast modern compression (Zstandard & Gzip)
+    encode zstd gzip
+
+    # Long-term caching for immutable hashed static assets (js, css, images, fonts)
+    @static {
+        file
+        path *.ico *.css *.js *.gif *.jpg *.jpeg *.png *.svg *.woff *.woff2 *.webp
+    }
+    header @static Cache-Control "public, max-age=31536000, immutable"
+
+    # Don't cache index.html so users always receive updates immediately
+    @html {
+        file
+        path *.html /
+    }
+    header @html Cache-Control "no-cache, no-store, must-revalidate"
+
+    # Security headers
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    }
+
+    # SPA routing fallback: serve requested file if it exists, otherwise fallback to index.html
+    try_files {path} /index.html
+
+    # Static file server
+    file_server
+
+    # Access logs
+    log {
+        output file /var/log/caddy/lifeinnewyork_access.log {
+            roll_size 10MB
+            roll_keep 5
+        }
+    }
+}
