@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Article, Language } from '../types';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { X, Check, Copy, MessageCircle, Send, Mail, Share2, Sparkles } from 'lucide-react';
+import { X, Check, Copy, MessageCircle, Send, Mail, Share2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface ShareModalProps {
@@ -175,7 +175,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
               className="flex flex-col items-center justify-center gap-1.5 p-3 border border-[#E5E1D8] bg-white hover:border-[#1A1A1A] hover:bg-[#F4F1EA] transition-all group cursor-pointer"
             >
               <div className="w-9 h-9 rounded-full bg-[#D23131] text-white flex items-center justify-center group-hover:scale-105 transition-transform">
-                <Sparkles className="w-4 h-4" />
+                <Share2 className="w-4 h-4" />
               </div>
               <span className="text-xs font-sans font-semibold text-[#1A1A1A]">{language === 'en' ? 'More' : 'Altro'}</span>
             </button>

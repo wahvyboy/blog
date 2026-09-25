@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Language } from '../types';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { X, Mail, CheckCircle, Sparkles, Send, Copy, ExternalLink, BookOpen, Home, Utensils, Compass } from 'lucide-react';
+import { X, Mail, CheckCircle, Send, ExternalLink, BookOpen, Home, Utensils, Compass } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface NewsletterPopupModalProps {
@@ -40,7 +40,6 @@ export const NewsletterPopupModal: React.FC<NewsletterPopupModalProps> = ({
   const [activePreset, setActivePreset] = useState<string>('all');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [copied, setCopied] = useState(false);
 
   // Generate automated template message based on current selections
   const generateTemplate = (userName: string, interests: string[], lang: Language): string => {
@@ -119,12 +118,6 @@ ${displayName}`;
     }
   };
 
-  const handleCopyMessage = () => {
-    navigator.clipboard.writeText(messageTemplate);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -176,7 +169,7 @@ ${displayName}`;
                 {/* Editorial Header */}
                 <div className="text-center max-w-lg mx-auto space-y-2">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#1A1A1A] text-white text-[10px] font-sans font-bold uppercase tracking-[0.25em]">
-                    <Sparkles className="w-3 h-3 text-[#D23131]" />
+                    <Mail className="w-3 h-3 text-[#D23131]" />
                     <span>{language === 'en' ? 'Official Editorial Gazette' : 'Gazzetta Editoriale Ufficiale'}</span>
                   </div>
 
@@ -322,37 +315,6 @@ ${displayName}`;
                     </div>
                   </div>
 
-                  {/* Auto-Filled Template Message Area */}
-                  <div className="space-y-1.5">
-                    <div className="flex items-center justify-between">
-                      <label className="block text-[11px] font-sans font-bold uppercase tracking-wider text-[#1A1A1A] flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-[#D23131]" />
-                        <span>{t.newsletterAutoFillLabel}</span>
-                      </label>
-                      <button
-                        type="button"
-                        onClick={handleCopyMessage}
-                        className="text-[10px] font-sans font-bold uppercase tracking-wider text-[#1A1A1A]/70 hover:text-[#D23131] flex items-center gap-1 cursor-pointer"
-                      >
-                        <Copy className="w-3 h-3" />
-                        <span>{copied ? (language === 'en' ? 'Copied!' : 'Copiato!') : (language === 'en' ? 'Copy Text' : 'Copia Testo')}</span>
-                      </button>
-                    </div>
-
-                    <textarea
-                      rows={5}
-                      value={messageTemplate}
-                      onChange={(e) => {
-                        setMessageTemplate(e.target.value);
-                        setIsCustomMessageEdited(true);
-                      }}
-                      className="w-full p-3 text-xs font-mono bg-white border border-[#1A1A1A]/30 focus:border-[#1A1A1A] focus:outline-none text-[#1A1A1A] leading-relaxed shadow-inner"
-                    />
-                    <p className="text-[10px] font-sans text-[#1A1A1A]/60 italic">
-                      {t.newsletterAutoFillHint}
-                    </p>
-                  </div>
-
                   {/* Submit and Action Buttons */}
                   <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
                     <button
@@ -361,17 +323,17 @@ ${displayName}`;
                       className="w-full sm:flex-1 bg-[#1A1A1A] hover:bg-[#D23131] text-white font-sans font-bold uppercase text-xs tracking-[0.2em] py-3.5 px-6 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md disabled:opacity-50"
                     >
                       <Send className="w-4 h-4" />
-                      <span>{isSubmitting ? (language === 'en' ? 'Transmitting...' : 'Invio in corso...') : t.newsletterSubscribe}</span>
+                      <span>{isSubmitting ? (language === 'en' ? 'Subscribing...' : 'Iscrizione in corso...') : t.newsletterSubscribe}</span>
                     </button>
 
                     <button
                       type="button"
                       onClick={handleMailtoDispatch}
                       className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-[#1A1A1A] border border-[#1A1A1A] font-sans font-bold uppercase text-xs tracking-wider py-3.5 px-4 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
-                      title="Open in your default email client"
+                      title={language === 'en' ? 'Open in your default email client with a pre-filled draft' : 'Apri nella tua app email con una bozza precompilata'}
                     >
-                      <ExternalLink className="w-3.5 h-3.5" />
-                      <span>{language === 'en' ? 'Email App' : 'App Email'}</span>
+                      <Mail className="w-3.5 h-3.5" />
+                      <span>{language === 'en' ? 'Email Us' : 'Scrivici via Email'}</span>
                     </button>
                   </div>
                 </form>
@@ -388,15 +350,10 @@ ${displayName}`;
                     {t.newsletterSubscribed}
                   </h3>
                   <p className="font-editorial-body text-[#4A4A4A] text-base max-w-md mx-auto">
-                    {t.newsletterSentTo} <strong className="text-[#1A1A1A]">{supportEmail}</strong>.
+                    {language === 'en'
+                      ? 'You are now subscribed to Life in New York dispatches. We look forward to delivering the pulse of the five boroughs straight to your inbox.'
+                      : 'La tua iscrizione ai dispacci di Life in New York è confermata. Riceverai presto le storie più autentiche dei cinque distretti nella tua casella di posta.'}
                   </p>
-                </div>
-
-                <div className="bg-white border border-[#E5E1D8] p-4 text-left font-mono text-xs max-w-md mx-auto overflow-x-auto space-y-1">
-                  <div className="text-[10px] uppercase font-bold text-neutral-400">Transmitted Dispatch Summary:</div>
-                  <div className="text-[#1A1A1A]"><strong>To:</strong> {supportEmail}</div>
-                  <div className="text-[#1A1A1A]"><strong>Subscriber:</strong> {name} &lt;{email}&gt;</div>
-                  <div className="text-[#1A1A1A]"><strong>Status:</strong> Dispatched successfully via automated template engine</div>
                 </div>
 
                 <div className="pt-4 flex justify-center gap-3">

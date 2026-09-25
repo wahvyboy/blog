@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Article, Language } from '../types';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { X, Share2, Volume2, VolumeX, Sparkles, MapPin, Clock, Calendar, ArrowLeft, Check, Heart, MessageSquare, Eye } from 'lucide-react';
+import { X, Share2, Volume2, VolumeX, Quote, MapPin, Clock, Calendar, ArrowLeft, Check, Heart, MessageSquare, Eye } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface ArticleReaderModalProps {
@@ -224,18 +224,18 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
             </div>
 
             {/* Main Featured Photo */}
-            <div className="relative overflow-hidden bg-neutral-100 border border-[#E5E1D8] aspect-16/9">
+            <div className="relative overflow-hidden bg-[#1A1A1A]/3 border border-[#E5E1D8] flex items-center justify-center max-h-[750px] w-full p-1 sm:p-2">
               <img
                 src={article.imageUrl}
                 alt={article.imageAlt[language]}
-                className="w-full h-full object-cover filter contrast-[1.02]"
+                className="w-auto h-auto max-w-full max-h-[750px] object-contain filter contrast-[1.02] mx-auto block"
               />
             </div>
 
             {/* Emotional Highlight Callout */}
             <div className="bg-[#F4F1EA] border-l-3 border-[#D23131] p-5 sm:p-7 my-6">
               <div className="flex items-center gap-2 text-[#D23131] font-sans font-bold text-xs uppercase tracking-[0.2em] mb-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#D23131]" />
+                <Quote className="w-3.5 h-3.5 text-[#D23131]" />
                 <span>{t.emotionalHighlightLabel}</span>
               </div>
               <p className="text-[#1A1A1A] font-serif-italic italic text-xl sm:text-2xl leading-relaxed">

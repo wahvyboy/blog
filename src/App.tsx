@@ -14,7 +14,7 @@ import { CookieBadge } from './components/CookieBadge';
 import { SeoStructuredData } from './components/SeoStructuredData';
 import { InfoModals } from './components/InfoModals';
 import { NewsletterPopupModal } from './components/NewsletterPopupModal';
-import { Sparkles, Compass, Search, Filter, RefreshCw, Layers } from 'lucide-react';
+import { Compass, Search, Filter, RefreshCw, Layers } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function App() {

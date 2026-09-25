@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Language, BrandAd } from '../types';
 import { LUXURY_BRANDS } from '../data/brands';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { Sparkles, ExternalLink, ShieldCheck, Compass, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Award, ExternalLink, ShieldCheck, Compass, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface BrandAdScrollShowcaseProps {
@@ -41,7 +41,7 @@ export const BrandAdScrollShowcase: React.FC<BrandAdScrollShowcaseProps> = ({
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="inline-flex items-center gap-1.5 bg-[#1A1A1A] text-white text-[10px] sm:text-xs font-sans font-bold px-2.5 py-0.5 uppercase tracking-widest">
-                <Sparkles className="w-3 h-3 text-amber-300" />
+                <Award className="w-3.5 h-3.5 text-amber-400" />
                 <span>{language === 'en' ? 'Official Partner Spotlight' : 'Vetrina Partner Ufficiali'}</span>
               </span>
               <span className="text-[#D23131] text-xs tracking-[0.2em] uppercase font-sans font-bold">

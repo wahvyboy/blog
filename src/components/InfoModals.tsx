@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Language } from '../types';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { X, CheckCircle, Send, ExternalLink, Mail, Building, Newspaper, Sparkles } from 'lucide-react';
+import { X, CheckCircle, Send, ExternalLink, Mail, Building, Newspaper } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface InfoModalsProps {

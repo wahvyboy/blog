@@ -1,7 +1,7 @@
 import React from 'react';
 import { Article, Language } from '../types';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { Share2, Clock, MapPin, Sparkles, ArrowRight, Eye } from 'lucide-react';
+import { Share2, Clock, MapPin, ArrowRight, Eye } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface ArticleCardProps {
@@ -124,17 +124,17 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
       {/* Featured Photo in Editorial Frame */}
       <div
         onClick={() => onReadMore(article)}
-        className="relative overflow-hidden border border-[#E5E1D8] cursor-pointer group bg-neutral-100 aspect-16/10 sm:aspect-21/10"
+        className="relative overflow-hidden border border-[#E5E1D8] cursor-pointer group bg-[#1A1A1A]/3 flex items-center justify-center w-full max-h-[620px]"
       >
         <img
           src={article.imageUrl}
           alt={article.imageAlt[language]}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102 filter contrast-[1.03]"
+          className="w-full h-auto max-h-[620px] object-contain transition-transform duration-700 group-hover:scale-[1.01] filter contrast-[1.03] mx-auto block"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
           <span className="text-white text-xs sm:text-sm font-sans font-bold uppercase tracking-widest drop-shadow-sm flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-amber-300" />
+            <ArrowRight className="w-4 h-4 text-white" />
             {t.readArticle}
           </span>
         </div>
