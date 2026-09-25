@@ -19,7 +19,7 @@ export const ARTICLES_DATA: Article[] = [
     },
     author: 'Special Features Desk',
     commentsCount: 148,
-    views: '1,000,000',
+    views: '1,148,290',
     readTime: {
       en: '7 min read',
       it: '7 min di lettura'

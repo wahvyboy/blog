@@ -79,9 +79,9 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
         {article.views && (
           <>
             <span className="text-[#1A1A1A]/30">/</span>
-            <span className="inline-flex items-center gap-1 font-bold text-[#D23131]">
-              <Eye className="w-3.5 h-3.5" />
-              <span>{article.views} {language === 'en' ? 'VIEWS' : 'VISUALIZZAZIONI'}</span>
+            <span className="inline-flex items-center gap-1 font-medium text-[#1A1A1A]/80">
+              <Eye className="w-3.5 h-3.5 text-[#D23131]" />
+              <span>{article.views} {t.views || 'views'}</span>
             </span>
           </>
         )}

@@ -210,9 +210,9 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
               {article.views && (
                 <>
                   <span>/</span>
-                  <span className="flex items-center gap-1.5 font-bold text-[#D23131]">
+                  <span className="flex items-center gap-1.5 font-medium text-[#1A1A1A]/85">
                     <Eye className="w-3.5 h-3.5 text-[#D23131]" />
-                    <span>{article.views} {language === 'en' ? 'VIEWS' : 'VISUALIZZAZIONI'}</span>
+                    <span>{article.views} {t.views || 'views'}</span>
                   </span>
                 </>
               )}
