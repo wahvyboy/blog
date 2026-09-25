@@ -1,7 +1,7 @@
 import React from 'react';
 import { Article, Language } from '../types';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { Share2, Clock, MapPin, Sparkles, ArrowRight } from 'lucide-react';
+import { Share2, Clock, MapPin, Sparkles, ArrowRight, Eye } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface ArticleCardProps {
@@ -73,9 +73,18 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
 
       {/* Metadata Bar */}
       <div className="flex flex-wrap items-center text-xs text-[#1A1A1A]/70 gap-x-2.5 gap-y-1 mb-5 font-sans uppercase tracking-widest">
-        <time dateTime="2025-06-23" className="font-semibold text-[#1A1A1A]">{article.date[language]}</time>
+        <time dateTime="2026-09-23" className="font-semibold text-[#1A1A1A]">{article.date[language]}</time>
         <span className="text-[#1A1A1A]/30">/</span>
         <span>{t.by} <strong className="text-[#1A1A1A] font-bold">{article.author}</strong></span>
+        {article.views && (
+          <>
+            <span className="text-[#1A1A1A]/30">/</span>
+            <span className="inline-flex items-center gap-1 font-bold text-[#D23131]">
+              <Eye className="w-3.5 h-3.5" />
+              <span>{article.views} {language === 'en' ? 'VIEWS' : 'VISUALIZZAZIONI'}</span>
+            </span>
+          </>
+        )}
         <span className="text-[#1A1A1A]/30">/</span>
         <span>{article.commentsCount} {t.comments}</span>
         <span className="hidden sm:inline text-[#1A1A1A]/30">/</span>

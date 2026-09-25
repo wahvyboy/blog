@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Article, Language } from '../types';
 import { UI_TRANSLATIONS } from '../data/translations';
-import { X, Share2, Volume2, VolumeX, Sparkles, MapPin, Clock, Calendar, ArrowLeft, Check, Heart, MessageSquare } from 'lucide-react';
+import { X, Share2, Volume2, VolumeX, Sparkles, MapPin, Clock, Calendar, ArrowLeft, Check, Heart, MessageSquare, Eye } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface ArticleReaderModalProps {
@@ -207,6 +207,15 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
               </span>
               <span>/</span>
               <span>{t.by} <strong className="text-[#1A1A1A] font-bold">{article.author}</strong></span>
+              {article.views && (
+                <>
+                  <span>/</span>
+                  <span className="flex items-center gap-1.5 font-bold text-[#D23131]">
+                    <Eye className="w-3.5 h-3.5 text-[#D23131]" />
+                    <span>{article.views} {language === 'en' ? 'VIEWS' : 'VISUALIZZAZIONI'}</span>
+                  </span>
+                </>
+              )}
               <span>/</span>
               <span className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5 text-[#D23131]" />

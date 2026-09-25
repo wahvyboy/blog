@@ -50,6 +50,7 @@ export interface Article {
   tags: string[];
   isFeatured?: boolean;
   isSidebarHighlight?: boolean;
+  views?: string;
 }
 
 export interface BrandAd {

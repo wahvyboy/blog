@@ -2,6 +2,101 @@ import { Article } from '../types';
 
 export const ARTICLES_DATA: Article[] = [
   {
+    id: 'lisa-kelly-ice-roads-story',
+    slug: 'lisa-kelly-ice-roads-story',
+    categoryKey: 'news',
+    category: {
+      en: 'TOP STORY • BREAKING PROFILE',
+      it: 'STORIA DI COPERTINA • SPECIALE'
+    },
+    title: {
+      en: 'LISA KELLY: THE STORY BEHIND THE WOMAN WHO TOOK ON THE ICE ROADS',
+      it: 'LISA KELLY: LA STORIA DIETRO LA DONNA CHE HA SFIDATO LE STRADE DI GHIACCIO'
+    },
+    date: {
+      en: 'September 23, 2026',
+      it: '23 Settembre 2026'
+    },
+    author: 'Special Features Desk',
+    commentsCount: 148,
+    views: '1,000,000',
+    readTime: {
+      en: '7 min read',
+      it: '7 min di lettura'
+    },
+    location: {
+      en: 'Fairbanks, Alaska & Arctic Ice Roads',
+      it: 'Fairbanks, Alaska & Strade di Ghiaccio Artiche'
+    },
+    imageUrl: '/images/lisa-kelly-truck.jpg',
+    imageAlt: {
+      en: 'Lisa Kelly stepping down from her Peterbilt heavy haul semi-truck cab',
+      it: 'Lisa Kelly mentre scende dalla cabina del suo camion per trasporti eccezionali Peterbilt'
+    },
+    excerpt: {
+      en: 'Lisa Kelly is not the kind of person who became famous by following the usual path. From frozen Arctic highways to perilous mountain passes across India and South America, she built an extraordinary career around a profession demanding courage, patience, and iron resolve.',
+      it: 'Lisa Kelly non è il tipo di persona diventata famosa seguendo sentieri convenzionali. Dalle autostrade ghiacciate dell\'Artico ai pericolosi passi montani di India e Sud America, ha costruito una carriera straordinaria affrontando una professione che richiede coraggio, pazienza e nervi d\'acciaio.'
+    },
+    emotionalHighlight: {
+      en: 'For Lisa Kelly, the road was never just a television set. It was her life: "If you want something badly enough, work for it and stop making excuses."',
+      it: 'Per Lisa Kelly, la strada non è mai stata un semplice set televisivo. È la sua vita: "Se vuoi qualcosa davvero, lavora sodo e smetti di cercare scuse."'
+    },
+    keyTakeaways: {
+      en: [
+        'Built a genuine heavy-haul career driving the treacherous Dalton Highway and Arctic ice crossings before television producers came calling.',
+        'Became an iconic international figure on History Channel’s Ice Road Truckers and navigated terrifying routes in Peru, Bolivia, and India on Deadliest Roads.',
+        'Purchased and operates her own custom Peterbilt 389 as an independent owner-operator, returning triumphantly in 2025 for Season 12.'
+      ],
+      it: [
+        'Ha costruito una vera carriera nel trasporto pesante affrontando la temibile Dalton Highway e le piste artiche prima ancora dell\'arrivo delle telecamere.',
+        'È diventata una figura iconica in Ice Road Truckers e ha affrontato percorsi estremi in Perù, Bolivia e India in Deadliest Roads.',
+        'Possiede e guida il proprio Peterbilt 389 come proprietaria-operatrice indipendente, tornando trionfalmente nel 2025 per la Stagione 12.'
+      ]
+    },
+    fullStory: {
+      en: [
+        'Lisa Kelly is not the kind of person who became famous by following the usual path.',
+        'She became known around the world for driving trucks through some of the most difficult conditions imaginable. From frozen roads in the Arctic to dangerous mountain roads overseas, Kelly built a career around a job that demands patience, courage, skill and a strong mind.',
+        'Millions of people know her from the History Channel series Ice Road Truckers. But there is much more to Lisa Kelly than what viewers see on television. She was a professional truck driver before the cameras arrived, and she has continued building her career long after becoming a television personality.',
+        'Who Is Lisa Kelly? Lisa Kelly is an American professional truck driver and television personality best known for Ice Road Truckers. She is associated with Alaska and has become one of the most recognizable female faces in the trucking industry. HISTORY describes her as a driver who helped pave the way for more women on the ice roads. She now owns her own Peterbilt 389 and has continued developing her trucking business and personal brand. What makes her story interesting is that trucking was not simply a television role for her: it was her real career.',
+        'How Lisa Kelly Got Into Trucking: Lisa Kelly did not grow up in a traditional trucking family. Before trucking became her career, she worked different jobs, including pizza delivery. Spending so much time behind the wheel helped her discover that she actually enjoyed driving. That eventually led her toward professional truck driving and a job with Carlile Transportation, an Alaska-based trucking company.',
+        'Her early years were not easy. Kelly has spoken about feeling that she had to work harder and prove herself in an industry dominated by men. She eventually earned the experience that helped turn her into a professional heavy-haul and ice-road driver.',
+        'How Lisa Kelly Became Famous: Lisa\'s big television opportunity came when her boss at Carlile suggested her for Ice Road Truckers. She joined the show in Season 3 and quickly became one of its most recognizable drivers. Her appearance was significant because she was one of the first women prominently featured on the series. But Lisa has explained that she wanted viewers to see more than just a woman driving a truck: she wanted to prove that she could do the job. Over the years, she appeared in most seasons of the show and also became part of IRT: Deadliest Roads, where drivers faced difficult roads in places including India and South America.',
+        'What Makes Ice Road Trucking So Dangerous? Watching a truck drive across a frozen road on television can make the job look almost simple. It isn\'t. Extreme cold can create serious mechanical problems. Drivers also have to deal with ice, snow, poor visibility, steep grades and the constant risk of losing control.',
+        'In a 2025 interview, Kelly explained that the cold can be difficult to understand unless you have experienced it yourself. Even when the truck\'s engine is running, the cab can become dangerously cold if the heating system is not working properly. She has also experienced situations where her truck slid backward on an icy hill: in one incident she described, she was outside the truck putting on chains when the truck began sliding backward. She had to jump over a guardrail and roll down the hill to get out of the way. That is the reality behind the television drama.',
+        'Lisa Kelly\'s Most Dangerous Roads Were Not Always Ice Roads: One of the surprising parts of Lisa Kelly\'s career is that some of her most frightening experiences happened outside North America. On IRT: Deadliest Roads, she travelled to places including India, Peru and Bolivia. She has said that those journeys could be more frightening than the ice roads because she was dealing with unfamiliar trucks, languages and roads that could deteriorate beneath the vehicle. The experience showed viewers another side of Kelly\'s driving ability: she wasn\'t simply an ice-road driver. She was an experienced driver willing to operate in unfamiliar and extremely difficult environments.',
+        'Is Ice Road Truckers Real? This is one of the biggest questions fans have about Lisa Kelly. The short answer is complicated. Kelly has explained that the show was not simply scripted, but television production naturally changes how real events are presented. There may be hours of normal driving that viewers never see. Producers have to turn that footage into a story that fits into a television episode. Kelly has said that some situations were genuinely dangerous and unexpected, while other situations could be encouraged or arranged to create a stronger television story. So the danger was real, but the television version was edited to make the story more dramatic.',
+        'Lisa Kelly and Life as a Woman in Trucking: Lisa Kelly became an important figure for women interested in trucking. But interestingly, she does not appear to define herself only by being a female truck driver. In a 2025 interview, she explained that being a woman in the industry is simply part of her reality. She sees her story as being about more than gender. Her message is broader: "If you want something badly enough, work for it and stop making excuses." Her career has therefore become an example for people who want to enter industries where they may feel like outsiders.',
+        'What Is Lisa Kelly Doing Now? Lisa Kelly did not disappear when Ice Road Truckers went off the air. She continued working as a truck driver and eventually became an owner-operator. That means she has greater control over her own truck and business, but it also means she carries more responsibility for repairs, operating costs and budgeting. In a 2025 interview, Kelly explained that owner-operator work can pay well, but the expenses can also be much higher. If your truck breaks down, you are responsible for dealing with the problem. She has also continued her interest in horses and horse breeding.',
+        'Lisa Kelly Returned to Ice Road Truckers: After an eight-year break, Ice Road Truckers returned for Season 12 in 2025. Lisa Kelly returned with it. HISTORY\'s Season 12 coverage lists Kelly among the returning cast, and the season includes episodes centered on problems she faces on the road. One episode follows Lisa after her engine is damaged by the harsh road conditions. Another sees her dealing with a loss of heat as temperatures fall toward –40 degrees. Her return gave longtime fans another opportunity to see the driver who helped make the series famous.',
+        'Lisa Kelly\'s Life Away From the Cameras: Despite her fame, Kelly has maintained a relatively private life. Her interests extend beyond trucking. She has been involved with horses and has a long-standing connection with outdoor and adventure activities. She has also been associated with motocross and other activities that fit her adventurous personality. That may explain why trucking feels natural to her: she appears to enjoy challenging environments rather than avoiding them.',
+        'Why People Still Find Lisa Kelly Interesting: Lisa Kelly\'s story works because it is bigger than a reality-TV show. She started as a professional driver. Then television introduced her to millions of viewers. Instead of allowing television to become the end of her career, she continued working, became an owner-operator and built a life around the career she actually wanted. She also became a recognizable example of what women can accomplish in a traditionally male-dominated industry. Most importantly, Lisa Kelly doesn\'t present herself as someone who has never struggled. Her career has involved dangerous roads, mechanical failures, criticism, financial responsibilities and the pressure that comes with being recognizable. Yet she continues to drive.',
+        'The Road Ahead for Lisa Kelly: Lisa Kelly has said that she likes where she is in her career. Rather than building a massive trucking fleet, she has expressed an interest in continuing to drive her own truck and keep doing the work she enjoys. She has also talked about expanding her property and breeding more horses. That may be the most interesting part of her story. After years of television fame, she still wants to drive. Not because she needs to prove that she can: because she actually likes the job. And that is perhaps the best way to understand Lisa Kelly. She is not simply the woman from Ice Road Truckers. She is a professional truck driver who happened to become a television star. And even after the cameras stopped rolling, she kept driving.',
+        'Final Thoughts: Lisa Kelly\'s journey from an aspiring truck driver to one of the most recognizable women in extreme trucking is a story about persistence. She entered an industry where she had to prove herself, became a television personality, faced some of the world\'s most challenging roads and eventually built a career beyond reality television. Her story continues to attract fans because the person behind the television character is still doing what she loves. For Lisa Kelly, the road was never just a television set. It was her life.'
+      ],
+      it: [
+        'Lisa Kelly non è il tipo di persona diventata famosa seguendo il solito percorso ordinario.',
+        'È diventata celebre in tutto il mondo per aver guidato bisonti della strada nelle condizioni ambientali più estreme. Dalle piste ghiacciate dell\'Artico alle insidiose scogliere montane all\'estero, la Kelly ha costruito una carriera leggendaria fondata su pazienza, audacia e nervi d\'acciaio.',
+        'Milioni di persone la conoscono per la serie di History Channel "Ice Road Truckers". Ma dietro l\'icona televisiva c\'è molto di più: era già una camionista professionista prima che si accendessero le telecamere, e ha continuato a forgiare la sua carriera ben oltre il piccolo schermo.',
+        'Chi è Lisa Kelly? È una camionista professionista e personaggio televisivo statunitense legata all\'Alaska, divenuta uno dei volti femminili più autorevoli nel settore dei trasporti pesanti. Oggi possiede un Peterbilt 389 e gestisce in prima persona la sua attività. Guidare non era una recita per lei: era ed è il suo vero mestiere.',
+        'Come è arrivata ai camion: Non è cresciuta in una famiglia di autotrasportatori. Prima di fare del volante la sua vita, ha svolto vari lavori tra cui la consegna pizze. Quell\'esperienza alla guida le fece capire la sua vocazione, portandola alla Carlile Transportation in Alaska. Ha dovuto faticare il doppio per guadagnarsi il rispetto in un ambiente maschile prima di dominare i carichi pesanti sulle piste di ghiaccio.',
+        'La notorietà globale: La grande occasione arrivò quando il suo responsabile la propose per la terza stagione di Ice Road Truckers. Con determinazione chiarì subito che non voleva apparire solo come una donna al volante, ma dimostrare il valore delle sue competenze tecniche. Successivamente ha affrontato anche "IRT: Deadliest Roads" in India, Bolivia e Perù.',
+        'I pericoli delle strade di ghiaccio: Dal divano può sembrare facile, ma il gelo estremo causa rotture meccaniche continue, scarsa visibilità, pendenze scivolose e il rischio perenne di sbandare. In una recente intervista ha ricordato quando un camion iniziò a scivolare all\'indietro su una collina ghiacciata mentre montava le catene: dovette saltare oltre il guardrail per salvarsi.',
+        'Non solo strade di ghiaccio: Alcune delle esperienze più terrorizzanti le ha vissute all\'estero, su strade franose e dissestate dell\'Himalaya e delle Ande, con veicoli sconosciuti e baratri a strapiombo.',
+        'Realtà o finzione? Lisa Kelly ha confermato che i pericoli sono assolutamente autentici, sebbene il montaggio televisivo enfatizzi la tensione. Le ore di guida solitaria e faticosa spesso non venivano mostrate, ma i rischi mortali erano verissimi.',
+        'Una donna nel mondo dei trasporti: Pur essendo un modello per migliaia di donne, non ama farsi definire esclusivamente dal genere. Il suo messaggio è universale: "Se vuoi qualcosa davvero, lavora sodo e smetti di cercare scuse".',
+        'Cosa fa oggi: Non si è fermata con la fine della trasmissione. È diventata proprietaria-operatrice del suo veicolo commerciale, gestendo direttamente costi, manutenzione e percorsi, coltivando parallelamente la passione per l\'allevamento di cavalli.',
+        'Il ritorno trionfale: Nel 2025, dopo otto anni di assenza, è tornata nella dodicesima stagione di Ice Road Truckers, affrontando avarie al motore e temperature a -40 gradi.',
+        'Vita lontano dai riflettori: Riservata e legata alla natura selvaggia, ama il motocross e le sfide avventurose.',
+        'Perché continua ad affascinare: La sua autenticità risiede nel fatto che non si è mai arresa davanti a guasti, critiche o pressioni mediatiche. Ama profondamente il suo lavoro e continua a macinare chilometri per pura passione.',
+        'La strada per il futuro: Nessun interesse a creare colossi aziendali spersonalizzati; vuole semplicemente continuare a guidare il suo Peterbilt e vivere libera nella sua tenuta.',
+        'Riflessioni finali: Per Lisa Kelly la strada non è mai stata una finzione televisiva. È la sua vera vita.'
+      ]
+    },
+    tags: ['Lisa Kelly', 'Ice Road Truckers', 'Alaska', 'Trucking', 'Women In Trucking', 'History Channel', 'Heavy Haul', 'Special Report'],
+    isFeatured: true
+  },
+  {
     id: '1',
     slug: 'brooklyn-sunset-park-de-facto-dump-fire',
     categoryKey: 'news',
