@@ -31,7 +31,7 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
     }
     return 12;
   };
-  const [likesCount, setLikesCount] = useState<number>(() => parseLikes(article.likesCount));
+  const [likesCount, setLikesCount] = useState<number>(() => parseLikes(article?.likesCount));
   const [hasLiked, setHasLiked] = useState(false);
   const [commentText, setCommentText] = useState('');
   const [userComments, setUserComments] = useState<Array<{ name: string; text: string; date: string }>>([
