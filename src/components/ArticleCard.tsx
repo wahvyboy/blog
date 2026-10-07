@@ -86,7 +86,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           </>
         )}
         <span className="text-[#1A1A1A]/30">/</span>
-        <span>{article.commentsCount} {t.comments}</span>
+        <span>{article.commentsCount.toLocaleString()} {t.comments}</span>
         <span className="hidden sm:inline text-[#1A1A1A]/30">/</span>
         <span className="hidden sm:inline-flex items-center gap-1 text-[#1A1A1A]/70">
           <Clock className="w-3 h-3 text-[#D23131]" />

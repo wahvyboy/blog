@@ -2,6 +2,98 @@ import { Article } from '../types';
 
 export const ARTICLES_DATA: Article[] = [
   {
+    id: 'ebenezer-inside-johnny-depp-darkest-journey-yet',
+    slug: 'ebenezer-inside-johnny-depp-darkest-journey-yet',
+    categoryKey: 'culture',
+    category: {
+      en: 'EXCLUSIVE • HOLLYWOOD INSIDER',
+      it: 'ESCLUSIVA • HOLLYWOOD INSIDER'
+    },
+    title: {
+      en: 'EBENEZER: INSIDE JOHNNY DEPP’S DARKEST JOURNEY YET',
+      it: 'EBENEZER: DENTRO IL VIAGGIO PIÙ OSCURO DI JOHNNY DEPP'
+    },
+    date: {
+      en: 'October 6, 2026',
+      it: '6 Ottobre 2026'
+    },
+    author: 'Jack Whigham (Manager to Johnny Depp)',
+    commentsCount: 18429,
+    views: '17,284,912',
+    likesCount: 2140892,
+    readTime: {
+      en: '6 min read',
+      it: '6 min di lettura'
+    },
+    location: {
+      en: 'Los Angeles & London',
+      it: 'Los Angeles & Londra'
+    },
+    imageUrl: '/images/ebenezer-johnny-depp.jpg',
+    imageAlt: {
+      en: 'Jack Whigham reflection during production of Ebenezer',
+      it: 'Riflesso di Jack Whigham durante la produzione di Ebenezer'
+    },
+    excerpt: {
+      en: 'Johnny Depp steps into the world of Ebenezer Scrooge—and his manager, Jack Whigham, gives us a closer look at the journey behind one of his most intriguing roles yet.',
+      it: 'Johnny Depp entra nel mondo di Ebenezer Scrooge: il suo manager, Jack Whigham, ci offre uno sguardo ravvicinato sul viaggio dietro uno dei suoi ruoli più complessi e affascinanti.'
+    },
+    emotionalHighlight: {
+      en: 'You may think you know Ebenezer Scrooge. You don’t know this Ebenezer.',
+      it: 'Pensi di conoscere Ebenezer Scrooge. Non conosci questo Ebenezer.'
+    },
+    keyTakeaways: {
+      en: [
+        'Johnny Depp takes on Charles Dickens’ famous Christmas story into significantly darker, psychological territory.',
+        'Manager Jack Whigham reveals the artistic preparation and deep emotional exploration shaping Depp’s performance.',
+        'In theaters November 13, 2026: "The name you know. The story you don\'t."'
+      ],
+      it: [
+        'Johnny Depp veste i panni del leggendario Ebenezer Scrooge in una rilettura psicologica e cupa.',
+        'Il manager Jack Whigham svela il metodo artistico e l\'esplorazione emotiva che animano la performance di Depp.',
+        'Nelle sale dal 13 Novembre 2026: "Il nome che conosci. La storia che non sai."'
+      ]
+    },
+    fullStory: {
+      en: [
+        'Johnny Depp steps into the world of Ebenezer Scrooge—and his manager, Jack Whigham, gives us a closer look at the journey behind one of his most intriguing roles yet.',
+        'Some movie roles are simply acted.',
+        'Others stay with you.',
+        'They ask an actor to go somewhere uncomfortable. Somewhere dark. Somewhere deeply human.',
+        'For Johnny Depp, stepping into the role of Ebenezer Scrooge in EBENEZER means entering exactly that kind of world.',
+        'A world filled with regret, mystery, ghosts, difficult choices, and the possibility of redemption.',
+        'As his manager, Jack Whigham, I have had the opportunity to watch Johnny approach this project with the creativity and seriousness that have shaped his career.',
+        'And from the beginning, there was something different about this one.',
+        'A Different Kind of Scrooge: When I first thought about Johnny taking on Scrooge, I knew audiences would expect something familiar. But I also knew Johnny would not simply repeat what had been done before. He has a way of bringing his own personality and depth to complicated characters. EBENEZER takes Charles Dickens’ famous Christmas story into darker territory. At the center of the story is Scrooge—a man forced to face the consequences of his life when supernatural visitors arrive to confront him with his past, present, and future. And that is where the story becomes more than a Christmas tale. It becomes a question: What happens when you are finally forced to face yourself?',
+        'Behind the Character: For me, that is one of the most interesting parts of EBENEZER. This is not simply a story about ghosts. It is a story about choices. It is about what happens when someone is finally forced to look at the life they have created. Johnny understands complicated characters. Throughout his career, he has taken characters that could easily become one-dimensional and given them personality, emotion, and unpredictability. Scrooge presents another challenge. Everyone knows the name. Everyone knows the basic story. So the question becomes: How do you make people look at him differently? When you are dealing with a character people already know, you have to find something new while still respecting the heart of the story. That is one of the things I find most interesting about Johnny’s approach. He is not simply trying to play Scrooge. He is trying to understand him. And sometimes, that is where the most interesting performances begin.',
+        'A Story About More Than Ghosts: The supernatural side of EBENEZER is obviously part of the attraction. But underneath the ghosts, darkness, and mystery is something much more personal. A man looking back at his life. A man being forced to confront the things he has done. A man discovering that the future may not be completely written. That is what gives the story its weight. As Johnny’s manager, I have seen how much work goes into a project long before audiences ever sit in a theater. There are conversations about the character, the story, the tone, the performances, and the world the director wants to create. With EBENEZER, that vision points toward something darker, more mysterious, and more personal.',
+        'You May Think You Know Ebenezer: There is something powerful about taking a story people think they already know and asking them to look at it again. That is what EBENEZER promises to do. This is not simply the Scrooge audiences remember. It is a journey into the mind of a man being forced to confront everything he has become. And Johnny Depp is at the center of that journey. When people watch the movie, I hope they leave thinking about their own lives—the choices they make, the people they love, and whether it is ever too late to change. Maybe that is why the story of Scrooge has survived for so long. Because beneath the ghosts and Christmas traditions is something everyone understands: regret, love, loss, choices, and the hope that change is still possible.',
+        'For me, watching Johnny step into that world has been a memorable part of the journey. And as his manager, I can say this: You may think you know Ebenezer Scrooge. You don’t know this Ebenezer.',
+        'EBENEZER — The name you know. The story you don’t. In theaters November 13, 2026. And this time... the ghosts are coming for him.',
+        'Image credit: New friend xxxxx'
+      ],
+      it: [
+        'Johnny Depp entra nel mondo di Ebenezer Scrooge: il suo manager, Jack Whigham, ci offre uno sguardo ravvicinato sul viaggio dietro uno dei suoi ruoli più complessi e affascinanti.',
+        'Alcuni ruoli cinematografici vengono semplicemente recitati.',
+        'Altri ti restano addosso.',
+        'Chiedono all\'attore di spingersi in luoghi scomodi. Da qualche parte nell\'oscurità. Da qualche parte profondamente umano.',
+        'Per Johnny Depp, interpretare Ebenezer Scrooge in EBENEZER significa entrare esattamente in quel tipo di mondo.',
+        'Un mondo colmo di rimpianti, mistero, fantasmi, scelte tormentate e possibilità di redenzione.',
+        'Come suo manager, io, Jack Whigham, ho avuto l\'opportunità di osservare Johnny affrontare questo progetto con la straordinaria creatività e serietà che ne hanno sempre contraddistinto la carriera.',
+        'E fin dall\'inizio, c\'era qualcosa di diverso in questa sfida.',
+        'Un tipo diverso di Scrooge: Quando ho pensato per la prima volta a Johnny nei panni di Scrooge, sapevo che il pubblico si sarebbe aspettato qualcosa di già visto. Ma sapevo anche che Johnny non avrebbe mai riproposto formule già battute. Ha un talento innato nel trasmettere personalità e profondità ai personaggi più complessi. EBENEZER conduce la celebre favola natalizia di Charles Dickens in territori decisamente più oscuri. Al centro c\'è Scrooge: un uomo costretto ad affrontare le conseguenze della propria esistenza quando spiriti soprannaturali giungono a metterlo di fronte al suo passato, presente e futuro. È qui che la narrazione smette di essere una semplice fiaba natalizia per diventare un interrogativo: cosa succede quando sei finalmente costretto a guardarti dentro?',
+        'Dietro il personaggio: Per me, questo è uno degli aspetti più stimolanti di EBENEZER. Non è soltanto una vicenda di fantasmi: è una storia di scelte. Parla di ciò che accade quando un uomo deve fare i conti con la vita che ha costruito. Johnny comprende i caratteri complessi. Nel corso della sua carriera ha preso figure che rischiavano la bidimensionalità donando loro anima, vulnerabilità e imprevedibilità. Scrooge è un banco di prova speciale: tutti conoscono il nome, tutti conoscono la trama. Come spingere le persone a guardarlo con occhi nuovi? Bisogna scoprire sfumature inedite rispettando il cuore dell\'opera. Johnny non si limita a recitare Scrooge: cerca di comprenderlo intimamente. Ed è da lì che nascono le interpretazioni più memorabili.',
+        'Molto più di una storia di spiriti: L\'elemento soprannaturale è una parte evidente del fascino. Ma dietro le apparizioni spettrali si nasconde un dramma intimo. Un uomo che riesamina il passato, costretto a riconoscere i propri errori, scoprendo che forse il futuro non è ancora scritto in modo definitivo. Come manager di Johnny, so quanto lavoro richieda un progetto prima ancora che arrivi al cinema: discussioni sul tono, sulla recitazione e sul mondo voluto dalla regia. In EBENEZER, quella visione punta a un\'intensità profonda, oscura e toccante.',
+        'Pensi di conoscere Ebenezer: C\'è una forza straordinaria nel prendere un classico e chiedere al pubblico di riscoprirlo. Questo è ciò che promette EBENEZER. Non è lo Scrooge della memoria tradizionale, bensì un viaggio nella mente di un uomo costretto a guardare ciò che è diventato. E Johnny Depp è al centro di questo viaggio. Spero che chi guarderà il film rifletta sulle proprie scelte, sugli affetti e sulla possibilità di cambiare. Forse è per questo che Scrooge resiste nei secoli: rimpianto, amore, perdita, redenzione.',
+        'Per me, osservare Johnny immergersi in questo universo è stato indimenticabile. E come suo manager posso affermare con certezza: pensavate di conoscere Ebenezer Scrooge, ma non conoscete questo Ebenezer.',
+        'EBENEZER — Il nome che conosci. La storia che non sai. Nelle sale dal 13 Novembre 2026. E questa volta... i fantasmi stanno arrivando per lui.',
+        'Crediti immagine: New friend xxxxx'
+      ]
+    },
+    tags: ['Johnny Depp', 'Ebenezer Scrooge', 'Ebenezer', 'Jack Whigham', 'Hollywood Exclusive', 'Cinema 2026', 'Charles Dickens', 'Special Report'],
+    isFeatured: true
+  },
+  {
     id: 'lisa-kelly-ice-roads-story',
     slug: 'lisa-kelly-ice-roads-story',
     categoryKey: 'news',

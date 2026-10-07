@@ -51,6 +51,7 @@ export interface Article {
   isFeatured?: boolean;
   isSidebarHighlight?: boolean;
   views?: string;
+  likesCount?: number | string;
 }
 
 export interface BrandAd {

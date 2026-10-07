@@ -23,7 +23,15 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
 }) => {
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
-  const [likesCount, setLikesCount] = useState(12);
+  const parseLikes = (val?: number | string) => {
+    if (typeof val === 'number') return val;
+    if (typeof val === 'string') {
+      const parsed = parseInt(val.replace(/,/g, ''), 10);
+      if (!isNaN(parsed)) return parsed;
+    }
+    return 12;
+  };
+  const [likesCount, setLikesCount] = useState<number>(() => parseLikes(article.likesCount));
   const [hasLiked, setHasLiked] = useState(false);
   const [commentText, setCommentText] = useState('');
   const [userComments, setUserComments] = useState<Array<{ name: string; text: string; date: string }>>([
@@ -38,8 +46,10 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
 
   const t = UI_TRANSLATIONS[language];
 
-  // Stop audio on close or article change
+  // Stop audio on close or article change and sync likes
   useEffect(() => {
+    setLikesCount(parseLikes(article?.likesCount));
+    setHasLiked(false);
     return () => {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
@@ -280,7 +290,7 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
                 }`}
               >
                 <Heart className={`w-4 h-4 ${hasLiked ? 'fill-rose-600 text-rose-600' : 'text-[#1A1A1A]'}`} />
-                <span>{likesCount} {language === 'en' ? 'Loved this story' : 'Hanno amato questa storia'}</span>
+                <span>{likesCount.toLocaleString()} {language === 'en' ? 'Loved this story' : 'Hanno amato questa storia'}</span>
               </button>
 
               <div className="flex items-center gap-2">
