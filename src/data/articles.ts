@@ -14,12 +14,12 @@ export const ARTICLES_DATA: Article[] = [
       it: 'EBENEZER: DENTRO IL VIAGGIO PIÙ OSCURO DI JOHNNY DEPP'
     },
     date: {
-      en: 'October 6, 2026',
-      it: '6 Ottobre 2026'
+      en: 'October 14, 2026',
+      it: '14 Ottobre 2026'
     },
     author: 'Jack Whigham (Manager to Johnny Depp)',
     commentsCount: 18429,
-    views: '17,284,912',
+    views: '23,482,915',
     likesCount: 2140892,
     readTime: {
       en: '6 min read',
